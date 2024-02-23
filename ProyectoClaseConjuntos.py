@@ -1,3 +1,7 @@
+import tkinter as tk
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib import pyplot as plt
+from matplotlib_venn import venn2, venn3
 
 #calcular la union de los conjuntos
 def UnionConjuntos(A,B):
@@ -66,6 +70,23 @@ def Subconjunto(A,inicio,fin):
 def Disjuntos(A,B):
     disjunto = set()
     return disjunto
+#--------------------------------Fin metodos-------------------------
+
+#--------------------------------Inicio Gui--------------------------
+
+# Creación de la ventana
+root = tk.Tk()
+root.title("Operaciones con Conjuntos")
+
+# Funciones de la interfaz gráfica
+def calcular_union():
+    conjunto_A = set(map(int, entry_A.get().split(',')))
+    conjunto_B = set(map(int, entry_B.get().split(',')))
+
+    resultado = UnionConjuntos(conjunto_A, conjunto_B)
+
+    label_resultado.config(text=f"Unión: {resultado}")
+
 
 
 A={1,2,3,4,5}
