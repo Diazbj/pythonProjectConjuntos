@@ -3,9 +3,10 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib import pyplot as plt
 from matplotlib_venn import venn2, venn3
 
-#calcular la union de los conjuntos
-def UnionConjuntos(A,B):
-    union=set();
+
+# calcular la union de los conjuntos
+def UnionConjuntos(A, B):
+    union = set()
 
     for elemento in A:
         union.add(elemento)
@@ -15,8 +16,9 @@ def UnionConjuntos(A,B):
 
     return union
 
-#Calcular la interseccion de los conjuntos
-def InterseccionConjuntos(A,B):
+
+# Calcular la interseccion de los conjuntos
+def InterseccionConjuntos(A, B):
     interseccion = set()
 
     for elemento in A:
@@ -25,37 +27,42 @@ def InterseccionConjuntos(A,B):
 
     return interseccion
 
-#Calcular diferencias de los conjuntos
-def DiferenciaConjuntos(A,B):
-    diferencia =set()
+
+# Calcular diferencias de los conjuntos
+def DiferenciaConjuntos(A, B):
+    diferencia = set()
 
     for elemento in A:
-        if  elemento not in B:
+        if elemento not in B:
             diferencia.add(elemento)
 
     return diferencia
 
-#Calcular complemento de conjuntos
-def ComplementoConjuntos(A,U):
-    complemento =set()
+
+# Calcular complemento de conjuntos
+def ComplementoConjuntos(A, U):
+    complemento = set()
     for elemento in U:
         if elemento not in A:
             complemento.add(elemento)
     return complemento
 
-#Calcular operaciones combinadas entre conjuntos
-def CombinacionesConjuntos(A,B):
-    combinaciones =set()
+
+# Calcular operaciones combinadas entre conjuntos
+def CombinacionesConjuntos(A, B):
+    combinaciones = set()
     return combinaciones
 
-#Calcular Cardinalidad del conjunto
+
+# Calcular Cardinalidad del conjunto
 def CalcularCardinalidad(A):
-    cardinalidad=len(A)
+    cardinalidad = len(A)
 
     return cardinalidad
 
-#calcular Subconjunto
-def Subconjunto(A,inicio,fin):
+
+# calcular Subconjunto
+def Subconjunto(A, inicio, fin):
     subconjunto = set()
     indice = 0
 
@@ -66,41 +73,31 @@ def Subconjunto(A,inicio,fin):
 
     return subconjunto
 
-#calcular conjuntos disjuntos entre dos conjuntos
-def Disjuntos(A,B):
+
+# calcular conjuntos disjuntos entre dos conjuntos
+def Disjuntos(A, B):
     disjunto = set()
     return disjunto
-#--------------------------------Fin metodos-------------------------
-
-#--------------------------------Inicio Gui--------------------------
-
-# Creación de la ventana
-root = tk.Tk()
-root.title("Operaciones con Conjuntos")
-
-# Funciones de la interfaz gráfica
-def calcular_union():
-    conjunto_A = set(map(int, entry_A.get().split(',')))
-    conjunto_B = set(map(int, entry_B.get().split(',')))
-
-    resultado = UnionConjuntos(conjunto_A, conjunto_B)
-
-    label_resultado.config(text=f"Unión: {resultado}")
 
 
+# --------------------------------Fin metodos-------------------------
 
-A={1,2,3,4,5}
-B={4,5,6,7}
-U={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}
 
-inicio=1
-fin=3
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7}
+C = {1, 2, 12}
+U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
+
+inicio = 1
+fin = 3
 
 print(A)
 print(B)
-print(UnionConjuntos(A,B))
-print(InterseccionConjuntos(A,B))
-print(DiferenciaConjuntos(A,B))
-print(ComplementoConjuntos(A,U))
+print(C)
+print(UnionConjuntos(A, B))
+print(InterseccionConjuntos(A, B))
+print(DiferenciaConjuntos(A, B))
+print(ComplementoConjuntos(A, U))
 print(CalcularCardinalidad(A))
-print(Subconjunto(A,inicio,fin))
+print(Subconjunto(A, inicio, fin))
+
