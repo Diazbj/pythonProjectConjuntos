@@ -236,7 +236,7 @@ crear_interfaz()
 
 A = {1, 2, 3, 4, 5}
 B = {4, 5, 6, 7}
-C = {1, 2, 12}
+C = {2, 4, 6,8}
 U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
 
 inicio = 1
@@ -262,4 +262,5 @@ print("La diferencia de A-B es: ",DiferenciaConjuntos(A,B))
 print("El complemento de A es: ",ComplementoConjuntos(A,U))
 print("La cardinalidad de el conjunto A es:",CalcularCardinalidad(A))
 print("El subconjunto de A es: ",Subconjunto(A,inicio,fin))
+print("La interseccion de los tres conjuntos es: ",InterseccionTresConjuntos(A,B,C))
 
