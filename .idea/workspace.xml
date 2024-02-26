@@ -39,7 +39,7 @@
     "Python.ProyectoClaseConjuntos.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging Jordy-Portatil",
+    "git-widget-placeholder": "Jordy-Portatil",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -95,6 +95,7 @@
       <workItem from="1708674648459" duration="44000" />
       <workItem from="1708669355390" duration="121000" />
       <workItem from="1708914559132" duration="8125000" />
+      <workItem from="1708923200344" duration="70000" />
     </task>
     <servers />
   </component>
