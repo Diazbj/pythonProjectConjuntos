@@ -83,54 +83,79 @@ def Disjuntos(A,B):
 
 # Función para mostrar el diagrama de Venn de dos conjuntos en una ventana
 
-def mostrar_venn(ventana, A, B,boton_presionado=None):
+def mostrar_venn(ventana, A, B, boton_presionado=None):
+    # Crear una nueva figura para el diagrama de Venn
     fig = Figure(figsize=(6, 6), dpi=100)
+    # Añadir una sub cuadricula a la figura
     venn_ax = fig.add_subplot(111)
+    # Verificar qué botón fue presionado para determinar las etiquetas del conjunto
     if boton_presionado == 'A_B':
         v = venn2(subsets=[A, B], set_labels=('A', 'B'), ax=venn_ax)
     elif boton_presionado == 'B_C':
         v = venn2(subsets=[A, B], set_labels=('B', 'C'), ax=venn_ax)
     else:
         v = venn2(subsets=[A, B], set_labels=('A', 'C'), ax=venn_ax)
+
+    # Establecer el texto para la región 10 (A - B)
     v.get_label_by_id('10').set_text(A - B)
-    v.get_label_by_id('11').set_text(InterseccionConjuntos(A,B))
+    # Establecer el texto para la región 11 (Intersección de A y B)
+    v.get_label_by_id('11').set_text(InterseccionConjuntos(A, B))
+    # Establecer el texto para la región 01 (B - A)
     v.get_label_by_id('01').set_text(B - A)
+    # Dibujar los círculos del diagrama de Venn
     c = venn2_circles(subsets=[A, B], linestyle='dashed', ax=venn_ax)
+    # Establecer el estilo de línea sólida para el primer círculo
     c[0].set_ls('solid')
 
+    # Crear espacio para  la figura en la interfaz gráfica de Tkinter
     canvas = FigureCanvasTkAgg(fig, master=ventana)
+    # Dibujar el espacio
     canvas.draw()
+    # Colocar el espacio en la ventana en la fila 5, columnas 1 a 5
     canvas.get_tk_widget().grid(row=5, column=1, columnspan=5, padx=5, pady=5)
 
 # Función para mostrar el diagrama de Venn de tres conjuntos en una ventana
 def mostrar_venn_3(ventana, A, B, C):
+    # Crear una nueva figura para el diagrama de Venn
     fig = Figure(figsize=(6, 6), dpi=100)
+
     venn_ax = fig.add_subplot(111)
-    v = venn3(subsets=(A, B, C,  ),
-              set_labels=('A', 'B', 'C'), ax=venn_ax)
-    c = venn3_circles(subsets=(A, B, C),
-                      linestyle='dashed', ax=venn_ax)
+    # Dibujar el diagrama de Venn de tres conjuntos con etiquetas A, B y C
+    v = venn3(subsets=(A, B, C), set_labels=('A', 'B', 'C'), ax=venn_ax)
+    # Dibujar los círculos del diagrama de Venn
+    c = venn3_circles(subsets=(A, B, C), linestyle='dashed', ax=venn_ax)
+    # Establecer el estilo de línea sólida para los círculos
     c[0].set_ls('solid')
     c[1].set_ls('solid')
     c[2].set_ls('solid')
-    # Verificar si el identificador existe antes de intentar establecer el texto
+    # Verificar si los identificadores de las regiones existen antes de establecer el texto
     if v.get_label_by_id('100') is not None:
-        v.get_label_by_id('100').set_text(A - (UnionConjuntos(B,C)))
+        # Establecer el texto para la región 100 (A - (B U C))
+        v.get_label_by_id('100').set_text(A - (UnionConjuntos(B, C)))
     if v.get_label_by_id('010') is not None:
-        v.get_label_by_id('010').set_text(B - (UnionConjuntos(A,C)))
+        # Establecer el texto para la región 010 (B - (A U C))
+        v.get_label_by_id('010').set_text(B - (UnionConjuntos(A, C)))
     if v.get_label_by_id('001') is not None:
-        v.get_label_by_id('001').set_text(C - (UnionConjuntos(A,B)))
+        # Establecer el texto para la región 001 (C - (A U B))
+        v.get_label_by_id('001').set_text(C - (UnionConjuntos(A, B)))
     if v.get_label_by_id('110') is not None:
+        # Establecer el texto para la región 110 ((A ∩ B) - C)
         v.get_label_by_id('110').set_text((InterseccionConjuntos(A, B) - C) if (InterseccionConjuntos(A, B) - C) else "")
     if v.get_label_by_id('101') is not None:
-        v.get_label_by_id('101').set_text((InterseccionConjuntos(A,C) - B) if (InterseccionConjuntos(A,C) - B) else "")
+        # Establecer el texto para la región 101 ((A ∩ C) - B)
+        v.get_label_by_id('101').set_text((InterseccionConjuntos(A, C) - B) if (InterseccionConjuntos(A, C) - B) else "")
     if v.get_label_by_id('011') is not None:
-        v.get_label_by_id('011').set_text((InterseccionConjuntos(B,C) - A) if (InterseccionConjuntos(B,C) - A) else "")
+        # Establecer el texto para la región 011 ((B ∩ C) - A)
+        v.get_label_by_id('011').set_text((InterseccionConjuntos(B, C) - A) if (InterseccionConjuntos(B, C) - A) else "")
     if v.get_label_by_id('111') is not None:
+        # Establecer el texto para la región 111 (Intersección de los tres conjuntos)
         v.get_label_by_id('111').set_text(InterseccionTresConjuntos(A, B, C))
 
+    # Crear espacio para  la figura en la interfaz gráfica de Tkinter
     canvas = FigureCanvasTkAgg(fig, master=ventana)
+    # Dibujar el espacio
     canvas.draw()
+    # Colocar el espacio en la ventana en la fila 5, columnas 1 a 5
     canvas.get_tk_widget().grid(row=5, column=1, columnspan=5, padx=5, pady=5)
 
 # Función para crear la interfaz gráfica
