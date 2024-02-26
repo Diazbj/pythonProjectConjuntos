@@ -81,6 +81,8 @@ def Disjuntos(A,B):
     disjunto = set()
     return disjunto
 
+# Función para mostrar el diagrama de Venn de dos conjuntos en una ventana
+
 def mostrar_venn(ventana, A, B,boton_presionado=None):
     fig = Figure(figsize=(6, 6), dpi=100)
     venn_ax = fig.add_subplot(111)
@@ -138,36 +140,44 @@ def crear_interfaz():
     # Establecer un tamaño fijo para la ventana
     ventana.geometry("900x700")
 
+    # Etiqueta y entrada para el conjunto A
     etiqueta_A = tk.Label(ventana, text="Conjunto A:")
     etiqueta_A.grid(row=0, column=0, padx=5, pady=5)
     entrada_A = tk.Entry(ventana)
     entrada_A.grid(row=0, column=1, padx=5, pady=5)
 
+    # Etiqueta y entrada para el conjunto B
     etiqueta_B = tk.Label(ventana, text="Conjunto B:")
     etiqueta_B.grid(row=1, column=0, padx=5, pady=5)
     entrada_B = tk.Entry(ventana)
     entrada_B.grid(row=1, column=1, padx=5, pady=5)
 
+    # Etiqueta y entrada para el conjunto C
     etiqueta_C = tk.Label(ventana, text="Conjunto C:")
     etiqueta_C.grid(row=0, column=2, padx=5, pady=5)
     entrada_C = tk.Entry(ventana)
     entrada_C.grid(row=0, column=3, padx=5, pady=5)
 
+    # Botón para mostrar el diagrama A y B
     boton_A_B = tk.Button(ventana, text="Diagrama A y B", command=lambda: mostrar_venn(ventana, set(entrada_A.get().split(',')), set(entrada_B.get().split(',')),'A_B'))
     boton_A_B.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
 
+    # Botón para mostrar el diagrama B y C
     boton_B_C = tk.Button(ventana, text="Diagrama B y C", command=lambda: mostrar_venn(ventana, set(entrada_B.get().split(',')), set(entrada_C.get().split(',')),'B_C'))
     boton_B_C.grid(row=3, column=0, columnspan=10, padx=5, pady=5)
 
-    boton_union_A_C = tk.Button(ventana, text="Diagrama A y C", command=lambda: mostrar_venn(ventana, set(entrada_A.get().split(',')), set(entrada_C.get().split(',')),'A_C'))
-    boton_union_A_C.grid(row=3, column=2, columnspan=10, padx=5, pady=5)
+    # Botón para mostrar el diagrama A y C
+    boton_A_C = tk.Button(ventana, text="Diagrama A y C", command=lambda: mostrar_venn(ventana, set(entrada_A.get().split(',')), set(entrada_C.get().split(',')),'A_C'))
+    boton_A_C.grid(row=3, column=2, columnspan=10, padx=5, pady=5)
 
-    boton_union_A_By_C = tk.Button(ventana, text="Diagrama A, B y C", command=lambda: mostrar_venn_3(ventana, set(entrada_A.get().split(',')), set(entrada_B.get().split(',')), set(entrada_C.get().split(','))))
-    boton_union_A_By_C.grid(row=3, column=4, columnspan=10, padx=5, pady=5)
+    # Botón para mostrar el diagrama A, B y C
+    boton_A_By_C = tk.Button(ventana, text="Diagrama A, B y C", command=lambda: mostrar_venn_3(ventana, set(entrada_A.get().split(',')), set(entrada_B.get().split(',')), set(entrada_C.get().split(','))))
+    boton_A_By_C.grid(row=3, column=4, columnspan=10, padx=5, pady=5)
 
+    # Ejecutar el bucle principal de la interfaz gráfica
     ventana.mainloop()
 
-
+# Llamar a la función para crear la interfaz
 crear_interfaz()
 
 
@@ -178,11 +188,11 @@ U={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}
 inicio=1
 fin=3
 
-print(A)
-print(B)
-print(UnionConjuntos(A,B))
-print(InterseccionConjuntos(A,B))
-print(DiferenciaConjuntos(A,B))
-print(ComplementoConjuntos(A,U))
-print(CalcularCardinalidad(A))
-print(Subconjunto(A,inicio,fin))
+print("El conjunto A es: ",A)
+print("El conjunto B es: ",B)
+print("La union de los conjuntos es: ",UnionConjuntos(A,B))
+print("La interseccion de los conjuntos es: ",InterseccionConjuntos(A,B))
+print("La diferencia de A-B es: ",DiferenciaConjuntos(A,B))
+print("El complemento de A es: ",ComplementoConjuntos(A,U))
+print("La cardinalidad de el conjunto A es:",CalcularCardinalidad(A))
+print("El subconjunto de A es: ",Subconjunto(A,inicio,fin))
