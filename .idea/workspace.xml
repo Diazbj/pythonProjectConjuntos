@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bae65fec-fcf6-42e4-9024-7373b275563f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pythonProjectConjuntos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProjectConjuntos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoClaseConjuntos.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoClaseConjuntos.py" afterDir="false" />
-    </list>
+    <list default="true" id="bae65fec-fcf6-42e4-9024-7373b275563f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +92,7 @@
       <workItem from="1708914559132" duration="8125000" />
       <workItem from="1708923200344" duration="70000" />
       <workItem from="1708923302560" duration="440000" />
+      <workItem from="1708961177446" duration="84000" />
     </task>
     <servers />
   </component>
@@ -104,7 +100,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/workspace_xml$ProyectoClaseConjuntos.coverage" NAME="ProyectoClaseConjuntos Coverage Results" MODIFIED="1708923517844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/workspace_xml$ProyectoClaseConjuntos.coverage" NAME="ProyectoClaseConjuntos Coverage Results" MODIFIED="1708961209728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProjectConjuntos$ProyectoClaseConjuntos.coverage" NAME="ProyectoClaseConjuntos Coverage Results" MODIFIED="1708674663239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

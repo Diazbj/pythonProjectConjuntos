@@ -41,8 +41,7 @@ def InterseccionConjuntos(A, B):
 
 
 # Calcular diferencias de los conjuntos
-def DiferenciaConjuntos(A, B):
-    diferencia = set()
+
 
 def InterseccionTresConjuntos(A,B,C):
     interseccion = set()
@@ -105,6 +104,7 @@ def Subconjunto(A, inicio, fin):
 def Disjuntos(A, B):
     disjunto = set()
     return disjunto
+#interseccion =0
 
 # Función para mostrar el diagrama de Venn de dos conjuntos en una ventana
 
