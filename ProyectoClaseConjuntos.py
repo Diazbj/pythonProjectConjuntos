@@ -1,5 +1,4 @@
 import tkinter as tk  # Importa la biblioteca Tkinter para la interfaz gráfica
-from matplotlib import pyplot as plt  # Importa pyplot de matplotlib para graficar
 from matplotlib_venn import venn2, venn3, venn3_circles,venn2_circles   # Importa venn2 de matplotlib_venn para dibujar diagramas de Venn
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
@@ -231,8 +230,8 @@ crear_interfaz()
 # --------------------------------Fin metodos-------------------------
 
 
-A = {1, 2, 3,4,5}
-B = {4, 5, 6, 7}
+A = {1,2,3,4,5}
+B = {4,5,6,7}
 C = {1,3,4,8}
 U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
 
