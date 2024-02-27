@@ -1,14 +1,3 @@
-
-import tkinter as tk
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib import pyplot as plt
-from matplotlib_venn import venn2, venn3
-
-
-# calcular la union de los conjuntos
-def UnionConjuntos(A, B):
-    union = set()
-
 import tkinter as tk  # Importa la biblioteca Tkinter para la interfaz gráfica
 from matplotlib import pyplot as plt  # Importa pyplot de matplotlib para graficar
 from matplotlib_venn import venn2, venn3, venn3_circles,venn2_circles   # Importa venn2 de matplotlib_venn para dibujar diagramas de Venn
@@ -16,8 +5,8 @@ from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 #calcular la union de los conjuntos
 def UnionConjuntos(A,B):
-    union=set();
 
+    union=set();
 
     for elemento in A:
         union.add(elemento)
@@ -75,8 +64,12 @@ def ComplementoConjuntos(A, U):
 
 
 # Calcular operaciones combinadas entre conjuntos
-def CombinacionesConjuntos(A, B):
+def CombinacionesConjuntos(A, B,C):
     combinaciones = set()
+
+    combinaciones=InterseccionConjuntos(A,B)
+    combinaciones=UnionConjuntos(C,combinaciones)
+
     return combinaciones
 
 
@@ -102,7 +95,11 @@ def Subconjunto(A, inicio, fin):
 
 # calcular conjuntos disjuntos entre dos conjuntos
 def Disjuntos(A, B):
-    disjunto = set()
+    disjunto = ""
+    if InterseccionConjuntos(A,B)==set():
+        disjunto = "Los conjuntos son disjuntos"
+    else:disjunto="Los conjuntos no son disjuntos"
+
     return disjunto
 #interseccion =0
 
@@ -234,9 +231,9 @@ crear_interfaz()
 # --------------------------------Fin metodos-------------------------
 
 
-A = {1, 2, 3, 4, 5}
+A = {1, 2, 3,4,5}
 B = {4, 5, 6, 7}
-C = {2, 4, 6,8}
+C = {1,3,4,8}
 U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
 
 inicio = 1
@@ -252,6 +249,7 @@ print(DiferenciaConjuntos(A, B))
 print(ComplementoConjuntos(A, U))
 print(CalcularCardinalidad(A))
 print(Subconjunto(A, inicio, fin))
+print(CombinacionesConjuntos(A,B,C))
 
 
 print("El conjunto A es: ",A)
@@ -263,4 +261,6 @@ print("El complemento de A es: ",ComplementoConjuntos(A,U))
 print("La cardinalidad de el conjunto A es:",CalcularCardinalidad(A))
 print("El subconjunto de A es: ",Subconjunto(A,inicio,fin))
 print("La interseccion de los tres conjuntos es: ",InterseccionTresConjuntos(A,B,C))
+print("Conjunto resultante de la operacion Cu(AnB): ",CombinacionesConjuntos(A,B,C))
+print(Disjuntos(A,B))
 
