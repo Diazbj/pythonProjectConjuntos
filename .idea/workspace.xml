@@ -37,7 +37,7 @@
     "Python.ProyectoClaseConjuntos.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Jordy-Portatil",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -58,7 +58,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.10 (ProyectoConjuntos)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -90,8 +89,15 @@
       <option name="presentableId" value="Default" />
       <updated>1708668859295</updated>
       <workItem from="1708668873917" duration="316000" />
+      <workItem from="1708669355390" duration="5217000" />
+      <workItem from="1708674648459" duration="44000" />
       <workItem from="1708669355390" duration="121000" />
       <workItem from="1708914559132" duration="8125000" />
+      <workItem from="1708923200344" duration="70000" />
+      <workItem from="1708923302560" duration="440000" />
+      <workItem from="1708961177446" duration="84000" />
+      <workItem from="1709003293166" duration="46000" />
+      <workItem from="1709003390966" duration="1583000" />
     </task>
     <servers />
   </component>
@@ -99,6 +105,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pythonProjectConjuntos$ProyectoClaseConjuntos.coverage" NAME="ProyectoClaseConjuntos Coverage Results" MODIFIED="1708922269997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/workspace_xml$ProyectoClaseConjuntos.coverage" NAME="ProyectoClaseConjuntos Coverage Results" MODIFIED="1709004922740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProjectConjuntos$ProyectoClaseConjuntos.coverage" NAME="ProyectoClaseConjuntos Coverage Results" MODIFIED="1708674663239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
